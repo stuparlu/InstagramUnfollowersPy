@@ -17,7 +17,7 @@ def main():
 
     print(filtered_list)
     html = opening_html_literal
-    html += "".join(f'<a href="{item["href"]}">{index+1}. {item["value"]}</a><br>' for index, item in enumerate(filtered_list))
+    html += "".join(f'<a href="{item["href"]}">{index+1}. {item["value"]}</a><br><br>' for index, item in enumerate(filtered_list))
     html += closing_html_literal
 
     with open(output_non_follower_file_path, "w") as file:
